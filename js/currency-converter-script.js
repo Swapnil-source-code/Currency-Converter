@@ -1,6 +1,5 @@
-const apiKey = "a867321f78556aaaac244c41";
 
-let api = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
+let api = `/.netlify/functions/currency?base=${fromDropDown}&target=${toDropDown}&amount=${amount}`;
 
 const fromDropDown = document.getElementById('from-currency-select');
 const toDropDown = document.getElementById('to-currency-select');
