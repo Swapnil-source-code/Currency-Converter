@@ -1,5 +1,5 @@
 
-let api = `/.netlify/functions/currency?base=${fromDropDown}&target=${toDropDown}&amount=${amount}`;
+let api = `/.netlify/functions/currency?base=${fromCurrency}&target=${toCurrency}&amount=${amount}`;
 
 const fromDropDown = document.getElementById('from-currency-select');
 const toDropDown = document.getElementById('to-currency-select');
