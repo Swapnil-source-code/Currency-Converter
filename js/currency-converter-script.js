@@ -36,11 +36,7 @@ let convertCurrency = () => {
       .then((resp) => resp.json())
       .then((data) => {
         
-        let fromExchangeRate = data.conversion_rates[fromCurrency];
-        let toExchangeRate = data.conversion_rates[toCurrency];
-
-        const convertedAmount = (amount / fromExchangeRate) * toExchangeRate;
-        result.innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
+        result.innerHTML = `${data.amount} ${data.base} = ${data.convertedAmount} ${data.target}`;
 
       });
   } else {
